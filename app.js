@@ -7,15 +7,17 @@
     extraNum += nums[i];
   }
 
-  var lineData = [
-    {"x": 150, "y": 100},
-    {"x": 250, "y": 100},
-    {"x": 350, "y": 154},
-    {"x": 350, "y": 157.5},
-    {"x": 350, "y": 157.5},
-    {"x": 350, "y": 161},
-    {"x": 250, "y": 300},
-    {"x": 150, "y": 400}
+  var lineDataA = [
+    {"x": 290, "y": 72},
+    {"x": 323, "y": 76},
+    {"x": 324, "y": 145},
+    {"x": 330, "y": 151}
+  ];
+  var lineDataB = [
+    {"x": 330, "y": 151},
+    {"x": 324, "y": 157},
+    {"x": 323, "y": 226},
+    {"x": 290, "y": 230}
   ];
 
   nums.push(extraNum)
@@ -108,9 +110,23 @@
       }
     });
 
-    var lineFunction = d3.svg.line()
-      .x(function(d) { return d.x; })
-      .y(function(d) { return d.y; })
-      .interpolate("linear");
+  var lineFunction = d3.svg.line()
+    .x(function(d) { return d.x; })
+    .y(function(d) { return d.y; })
+    .interpolate("cardinal");
+
+  var lineGraphA = d3.select("svg").append("path")
+    .attr("d", lineFunction(lineDataA))
+    .attr("stroke", "black")
+    .attr("stroke-width", 1)
+    .attr("stroke-cap", "round")
+    .attr("fill", "none");
+
+  var lineGraphB = d3.select("svg").append("path")
+    .attr("d", lineFunction(lineDataB))
+    .attr("stroke", "black")
+    .attr("stroke-width", 1)
+    .attr("stroke-cap", "round")
+    .attr("fill", "none");
 
 })()
