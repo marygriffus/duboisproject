@@ -1,4 +1,19 @@
 (function(){
+  var button = document.querySelector("button")
+  button.onclick = function(){
+    var newGraph = document.querySelector(".new")
+    var originalGraph = document.querySelector(".original")
+    if (newGraph.style.display !== "none") {
+      newGraph.style.display = "none";
+      originalGraph.style.display = "block";
+      document.body.style.backgroundColor = "#EEECE8";
+    } else {
+      newGraph.style.display = "block";
+      originalGraph.style.display = "none";
+      document.body.style.backgroundColor = "#E0D3C7";
+    }
+  }
+
   var statuses = ["BANKRUPT", "IN DEBT", "CLEARED NOTHING", "CLEARED LESS THAN $10", "CLEARED $10-25", "CLEARED $25-50", "CLEARED $50 OR MORE"]
   var nums = [3, 168, 53, 27, 15, 13, 13]
 
