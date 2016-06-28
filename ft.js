@@ -45,7 +45,7 @@
       .domain([0, statuses.length])
       .range([25, 250]);
 
-  var canvas = d3.select('.chart')
+  var canvas = d3.select('.ftchart')
 			.append('svg')
 			.attr({'width':750,'height':300});
 
