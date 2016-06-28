@@ -6,11 +6,11 @@
     if (newGraph.style.display !== "none") {
       newGraph.style.display = "none";
       originalGraph.style.display = "block";
-      document.body.style.backgroundColor = "#EEECE8";
+      document.querySelector(".farm-tenant").style.backgroundColor = "#EEECE8";
     } else {
       newGraph.style.display = "block";
       originalGraph.style.display = "none";
-      document.body.style.backgroundColor = "#E0D3C7";
+      document.querySelector(".farm-tenant").style.backgroundColor = "#E0D3C7";
     }
   }
 

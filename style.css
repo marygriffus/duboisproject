@@ -1,14 +1,29 @@
-body {
-  margin: 10px auto;
+* {
   font-family: 'Exo 2', sans-serif;
-  background-color: #E0D3C7;
-  font-size: 13px;
   text-align: center;
+}
+
+.intro {
+  padding: 15px;
+}
+
+.project {
+  border: 3px solid darkgrey;
+  max-width: 90%;
+  margin: 10px auto;
 }
 
 h3 {
   margin: 50px auto;
   font-size: 24px;
+}
+
+.farm-tenant {
+  padding: 20px;
+  font-family: 'Exo 2', sans-serif;
+  background-color: #E0D3C7;
+  font-size: 13px;
+  text-align: center;
 }
 
 .chart div {
