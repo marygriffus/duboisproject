@@ -7,12 +7,16 @@
     extraNum += nums[i];
   }
 
-  lineData = [
-    {"x": 100, "y":100},
-    {"x": 350, "y": 150},
-    {"x": 350, "y": 175},
-    {"x": 100, "y":400}
-  ]
+  var lineData = [
+    {"x": 150, "y": 100},
+    {"x": 250, "y": 100},
+    {"x": 350, "y": 154},
+    {"x": 350, "y": 157.5},
+    {"x": 350, "y": 157.5},
+    {"x": 350, "y": 161},
+    {"x": 250, "y": 300},
+    {"x": 150, "y": 400}
+  ];
 
   nums.push(extraNum)
 
@@ -103,5 +107,10 @@
         return "black";
       }
     });
+
+    var lineFunction = d3.svg.line()
+      .x(function(d) { return d.x; })
+      .y(function(d) { return d.y; })
+      .interpolate("linear");
 
 })()
