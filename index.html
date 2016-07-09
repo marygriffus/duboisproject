@@ -3,14 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>Du Bois Project</title>
+  <script src='https://api.tiles.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
   <link href='https://fonts.googleapis.com/css?family=Exo+2:100' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h2>W.E.B. Du Bois Project</h2>
 
-  <p class="project intro">Welcome! W.E.B. Du Bois, famed author, editor, scholar, educator, and civil rights activist, created a beautiful set of graphs for the 1900 Paris Exposition. I was enthralled when I saw them, and as an exercise to push the limits of my data vis capabilities, I am replicating one of his graphs each week with d3, a JavaScript library. Hit "Toggle chart view" to switch between the original charts and my versions. Please drop me a line at m@marygriffus.com if you have any comments or questions!</p>
+  <p class="project intro">W.E.B. Du Bois, famed author, editor, scholar, educator, and civil rights activist, created a beautiful set of graphs for the 1900 Paris Exposition (as well as creating many others over the course of his career, drawing from his huge base of field work). I am replicating one of his graphs each week with d3.js and keeping them here. Hit "Toggle chart view" to switch between the original charts and the new versions. Email me at m@marygriffus.com if you have any comments or questions!</p>
 
+  <div class="mcintosh project">
+    <div class="new">
+      <div id='mcmap'></div>
+    </div>
+    <div class="original">
+      <img src="http://cdn.loc.gov/service/pnp/ppmsca/33800/33897r.jpg" />
+    </div>
+  </div>
+
+  <p class="project intro">Worth noting: The set of points are not mutated from the first map to the remake, but they are aligned with a few geographical markers (railway, bodies of water). Sapelo Island (population mass in the southeast corner of map) and Shellman's Bluff (northeast corner) are distorted in the original, but on zoom it is pretty clear how the population should be transformed onto the modern map. Also, I didn't take out the modern roads because a) I don't have a reliable map of the roads as they were in 1890, and b) It's cool to see how the historical residences map onto the modern landscape (even if they are askew). Would be an interesting time series, and a good reason to find out how granular the Census data is.</p>
 
   <div class="farm-tenant project">
     <div class="new">
@@ -21,10 +33,15 @@
     <div class="original">
       <img src="http://cdn.loc.gov/service/pnp/ppmsca/33800/33892r.jpg" />
     </div>
-    <button>Toggle chart view</button>
   </div>
+
+  <p class="project intro">Sad that even with those who "Cleared Nothing" included in the combined category of tenant farmers with non-negative outcomes, it's still smaller than the category of farmers who ended the year in debt.</p>
+
+  <button>Toggle chart view</button>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
   <script src="data.js"></script>
   <script src="ft.js"></script>
+  <script src="mc.js"></script>
 </body>
 </html>

@@ -1,3 +1,6 @@
+/***********/
+/*Universal*/
+/***********/
 * {
   font-family: 'Exo 2', sans-serif;
   text-align: center;
@@ -9,8 +12,13 @@
 
 .project {
   border: 3px solid darkgrey;
-  max-width: 90%;
+  width: 90%;
   margin: 10px auto;
+  padding: 10px;
+}
+
+.project~p {
+  margin-bottom: 50px;
 }
 
 h3 {
@@ -18,28 +26,24 @@ h3 {
   font-size: 24px;
 }
 
-.farm-tenant {
-  padding: 20px;
-  font-family: 'Exo 2', sans-serif;
-  background-color: #E0D3C7;
-  font-size: 13px;
-  text-align: center;
+.original img {
+  height: 600px;
 }
 
-.chart div {
-  font-size: 10px;
-  background-color: #F55A63;
-  text-align: right;
-  padding: 6px;
-  margin: 5px;
-  color: white;
+p {
+  margin-bottom: 50px;
 }
 
+/******************************/
+/*Switches between old and new*/
+/******************************/
 button {
-  font-size: 15px;
+  font-size: 18px;
   position: fixed;
   bottom: 20px;
   left: 45%;
+  background: black;
+  color: beige;
 }
 
 .new {
@@ -48,4 +52,54 @@ button {
 
 .original {
   display: none;
+}
+
+
+/*******************/
+/*Farm tenant chart*/
+/*******************/
+.farm-tenant {
+  background-color: #E0D3C7;
+  font-size: 13px;
+  text-align: center;
+  height: 600px;
+  padding-top: 100px;
+}
+
+/*change this around later! should be more specifically named!*/
+.chart div {
+  font-size: 10px;
+  background-color: #F55A63;
+  text-align: right;
+  margin: 5px;
+  color: white;
+}
+
+
+/*********************/
+/*McIntosh County Map*/
+/*********************/
+#mcmap {
+  margin: 0 auto;
+  height: 600px;
+  width: 800px;
+}
+
+.legend {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.legend p {
+  font-size: 10px;
+  line-height: 14px;
+  text-align: left;
+}
+
+.legend i {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    float: left;
+    border: 1px solid black;
+    margin-right: 8px;
 }

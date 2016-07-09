@@ -1,15 +1,15 @@
 (function(){
   var button = document.querySelector("button")
   button.onclick = function(){
-    var newGraph = document.querySelector(".new")
-    var originalGraph = document.querySelector(".original")
-    if (newGraph.style.display !== "none") {
-      newGraph.style.display = "none";
-      originalGraph.style.display = "block";
+    var newGraph = document.querySelectorAll(".new")
+    var originalGraph = document.querySelectorAll(".original")
+    if (newGraph[0].style.display !== "none") {
+      newGraph.forEach(function(el){ el.style.display = "none" });
+      originalGraph.forEach(function(el){ el.style.display = "block" });
       document.querySelector(".farm-tenant").style.backgroundColor = "#EEECE8";
     } else {
-      newGraph.style.display = "block";
-      originalGraph.style.display = "none";
+      newGraph.forEach(function(el){ el.style.display = "block" });
+      originalGraph.forEach(function(el){ el.style.display = "none" });
       document.querySelector(".farm-tenant").style.backgroundColor = "#E0D3C7";
     }
   }
